@@ -22,10 +22,19 @@
     margin: 0;
 }
 
-.profile__edit-button {
+.profile__edit-btn {
     margin-top: auto;
+    background-color: transparent;
+    border: none;
 }
 
 .profile__new-post {
     margin-left: auto;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    width: 149px;
+    height: 52px;
+    border-radius: 8px;
+    row-gap: 8px;
 }
