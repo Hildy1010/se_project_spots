@@ -16,5 +16,5 @@
 
 Project 3: Spots, Ty Hilderbrand 2025
 
-[Screen recording link](https://drive.google.com/file/d/1M_SaLCcScTOjk582XTOBPpu_j3OSgaa0/view?usp=drive_link) 
+[Screen recording link](https://drive.google.com/file/d/1M_SaLCcScTOjk582XTOBPpu_j3OSgaa0/view) 
 [Link to my personal Github:](https://github.com/Hildy1010) 
