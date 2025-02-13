@@ -1,21 +1,20 @@
 # Project 3: Spots
 
-### Overview  
+    Project 3: Spots, is a responsive design project designed to be created for all screen sizes to view.
+    This project was created with the Desktop first method, transitioning into tablet and mobile views.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+### New skills used in this lesson
+
+    * Display: Grid
+    * @Media screen and (max-width: )
+    * combination of flexbox and Display: Grid
+    * Figma design tool
+
+### Future plans with Project 3: Spots
+
+    Project 3: Spots will be used in the following sprints, adding Javascript and really giving this project/website a reactive element. I'm very excited to see what this project looks and feels like in the end stages of its many new adaptations.
+
+Project 3: Spots, Ty Hilderbrand 2025
+
+[Screen recording link](https://drive.google.com/file/d/1M_SaLCcScTOjk582XTOBPpu_j3OSgaa0/view?usp=drive_link) 
+[Link to my personal Github:](https://github.com/Hildy1010) 
