@@ -12,16 +12,18 @@
     align-items: center;
 }
 
-.card__like_btn {
+.card__like-btn {
     background-image: url(../images/likeIcon.svg.svg);
     width: 23px;
     height: 20px;
     border: none;
     background-color: transparent;
+    opacity: .4;
 }
 
-.card__like_btn:hover {
+.card__like-btn:hover {
     cursor: pointer;
+    color: rgba(33, 33, 33, 1);
 }
 
 .card__title {
@@ -32,6 +34,7 @@
     overflow: hidden;
     white-space: nowrap;
     max-width: 375px;
+    color: rgba(33, 33, 33, 1);
 }
 
 @media screen and (max-width: 627px) {

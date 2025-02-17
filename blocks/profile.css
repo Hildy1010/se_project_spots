@@ -30,10 +30,14 @@
     font-size: 16px;
     line-height: 1;
     color: rgba(33, 33, 33, 0.7);
-    text-overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 97px;
+    font-weight: 500;
 }
 
-.profile__edit_btn {
+.profile__edit-btn {
     margin-top: auto;
     background-color: transparent;
     border: none;
@@ -43,13 +47,16 @@
     font-size: 16px;
     line-height: 1;
     color: rgba(33, 33, 33, 1);
+    font-weight: 500;
 }
 
-.profile__edit_btn:hover {
+.profile__edit-btn:hover {
     cursor: pointer;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 500;
 }
 
-.profile__new_post {
+.profile__add-btn {
     margin-left: auto;
     background-color: rgba(33, 33, 33, 1);
     border: none;
@@ -66,15 +73,16 @@
     line-height: 1;
 }
 
-.profile__new_post:hover {
+.profile__add-btn:hover {
     cursor: pointer;
+    background-color: rgba(33, 33, 33, 0.8);
 }
 
-.profile__new_post-icon {
+.profile__add-icon {
     margin: 0 8px;
 }
 
-.profile__edit_btn-icon {
+.profile__edit-icon {
     margin: 0 8px;
 }
 
