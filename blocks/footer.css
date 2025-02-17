@@ -14,6 +14,7 @@
     height: 16px;
     text-wrap: nowrap;
     margin: 0;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 627px) {
@@ -23,10 +24,5 @@
         justify-content: center;
         text-align: center;
         padding: 60px 0;
-    }
-
-    .footer__copyright {
-        width: 104px;
-        height: 16px;
     }
 }
