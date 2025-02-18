@@ -31,7 +31,6 @@
     font-size: 20px;
     line-height: 1.2;
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
     max-width: 375px;
     color: rgba(33, 33, 33, 1);
