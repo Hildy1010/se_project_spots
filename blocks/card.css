@@ -23,7 +23,7 @@
 
 .card__like-btn:hover {
     cursor: pointer;
-    color: rgba(33, 33, 33, 1);
+    opacity: 100%;
 }
 
 .card__title {
