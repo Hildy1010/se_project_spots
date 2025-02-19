@@ -32,6 +32,7 @@
     line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow: hidden;
     max-width: 375px;
     color: rgba(33, 33, 33, 1);
 }
