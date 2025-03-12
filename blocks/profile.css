@@ -34,8 +34,10 @@
   line-height: 1;
   color: rgba(33, 33, 33, 0.7);
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   max-width: 420px;
   font-weight: 500;
 }
@@ -51,12 +53,12 @@
   line-height: 1;
   color: rgba(33, 33, 33, 1);
   font-weight: 500;
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .profile__edit-btn:hover {
   cursor: pointer;
-  opacity: 100%;
+  opacity: 1.0;
 }
 
 .profile__add-btn {
@@ -78,7 +80,7 @@
 
 .profile__add-btn:hover {
   cursor: pointer;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .profile__add-icon {
