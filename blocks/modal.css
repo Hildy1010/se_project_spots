@@ -82,6 +82,12 @@
     color: rgba(33, 33, 33, 1);
     border-radius: 8px;
     border: 1px solid;
+    border-color: rgba(33, 33, 33, .4);
+}
+
+.modal__input:hover {
+    cursor: pointer;
+    border-color: rgba(33, 33, 33, 1);
 }
 
 .modal__submit-btn {
