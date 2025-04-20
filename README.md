@@ -3,7 +3,7 @@
     Project 3: Spots, is a responsive design project designed to be created for all screen sizes to view.
     This project was created with the Desktop first method, transitioning into tablet and mobile views.
 
-### New skills used in this lesson
+## New skills used in this lesson
 
     * Display: Grid
     * @Media screen and (max-width: )

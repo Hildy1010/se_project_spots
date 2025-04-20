@@ -38,6 +38,7 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
+const previewModalCloseBtn = previewModal.querySelector(".modal__close-icon");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
@@ -59,7 +60,7 @@ function handleEditFormSubmit(evt) {
 
 function handleAddCardSubmit(evt) {
     evt.preventDefault();
-    const inputValues = { name: cardNameInput, link: cardLinkInput };
+    const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
     const cardEl = getCardElement(inputValues);
     cardsList.prepend(cardEl);
     closeModal(cardModal);
@@ -84,15 +85,19 @@ function getCardElement(data) {
     cardImageEl.addEventListener("click", () => {
         openModal(previewModal);
         previewModalImageEl.src = data.link;
+        previewModalImageEl.alt =  data.name;
         previewModalCaptionEl.textContent = data.name;
     });
     
-   
-
-    return cardElement;
+   const cardDeleteIconEl = cardElement.querySelector(".card__delete-icon");
+   cardDeleteIconEl.addEventListener("click", () => {
+    cardDeleteIconEl.closest(".card").remove();
+   });
+    
+   return cardElement;
 };
 
-previewModal.addEventListener("click", () =>{
+previewModalCloseBtn.addEventListener("click", () =>{
     closeModal(previewModal);
 });
 
