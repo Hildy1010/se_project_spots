@@ -12,10 +12,12 @@
     padding: 0 20px;
     visibility: hidden;
     transition: visibility 0.3s, opacity 0.3s ease-in;
+    opacity: 0;
 }
 
 .modal_opened {
     visibility: visible;
+    opacity: 1;
 }
 
 .modal__container {
@@ -26,16 +28,18 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 8px;
+    background-color: none;
 }
 
 .modal__container_type_preview {
     padding: 0;
     width: 80vw;
     height: 80vh;
+    background-color: transparent;
 }
 
 .modal__image {
-    max-width: 90vh;
+    width: 100%;
     border-radius: 8px;
     height: 100%;
 }
@@ -43,9 +47,17 @@
 .modal__caption {
     border-radius: 8px;
     padding: 4px 8px;
-    width: 214px;
+    max-width: 214px;
     height: 32px;
     background-color: rgba(33, 33, 33, 1);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
 }
 
 .modal__close-btn {

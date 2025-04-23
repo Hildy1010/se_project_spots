@@ -104,7 +104,8 @@
               type="url" 
               class="modal__input" 
               placeholder="Paste a link to the picture"
-              name="link">
+              name="link"
+              required>
             </label>
             <label for="add-card-name-input" class="modal__label">
               Caption
@@ -113,7 +114,8 @@
               type="text" 
               class="modal__input" 
               placeholder="Type your caption"
-              name="name">
+              name="name"
+              required>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -121,7 +123,7 @@
       </div>
       <div class="modal" id="preview-modal">
         <div class="modal__container modal__container_type_preview">
-          <button type="button" class="modal__close-btn">
+          <button type="button" class="modal__close-btn modal__close-btn_type_preview">
             <img src="./images/Modal__close-btn.svg" 
             class="modal__close-icon modal__close-icon_type_preview" 
             alt="close button">
