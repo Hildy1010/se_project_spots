@@ -1,28 +1,40 @@
 const showInputError = (formEl, inputEl, errorMessage) => {
-    const errorMessageID = inputEl.id + "-error";
-    const errorMessageEl = formEl.querySelector("# + errorMessageID");
+    const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
     errorMessageEl.textContent = errorMessage;
+    inputEl.classList.add("modal__input_type_error");
 };
 
 const hideInputError = (formEl, inputEl) => {
-    const errorMessageID = inputEl.id + "-error";
-    const errorMessageEl = formEl.querySelector("# + errorMessageID");
+    const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
     errorMessageEl.textContent = "";
+    inputEl.classList.remove("modal__input_type_error");
 };
 
-function checkInputValidity(formEl, inputEl) {
+const checkInputValidity = (formEl, inputEl) => {
     if (!inputEl.validity.valid) {
         showInputError(formEl, inputEl, inputEl.validationMessage);
     } else {
         hideInputError(formEl, inputEl);
-    };
+    }
 };
 
-function setEventListeners(formEl) {
-    const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-    const buttonElement = formEl.querySelector(".modal__submit");
+const hasInvalidInput = (inputList) => {
+    return inputList.some((input) => {
+        return !input.validity.valid;
+    });
+};
 
-    toggleBittonState(inputList, buttonElement);
+const toggleButtonState = (inputList, buttonEl) {
+    if (hasInvalidInput(inputList)) {
+        buttonEl.disabled = true;
+    } else {
+        buttonEl.
+    }
+}
+
+const setEventListeners = (formEl) => {
+    const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
+    const buttonElement = formEl.querySelector(".modal__submit-btn");
 
     inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", function () {
@@ -34,7 +46,7 @@ function setEventListeners(formEl) {
 
 function enableValidation() {
     const formList = document.querySelectorAll(".modal__form");
-    formList.foreach((formEl) => {
+    formList.forEach((formEl) => {
         setEventListeners(formEl);
     });
 };
