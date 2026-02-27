@@ -24,15 +24,15 @@ const hasInvalidInput = (inputList) => {
     });
 };
 
-const toggleButtonState = (inputList, buttonEl) {
+const toggleButtonState = (inputList, buttonEl) => {
     if (hasInvalidInput(inputList)) {
         buttonEl.disabled = true;
     } else {
-        buttonEl.
+        buttonEl.disabled = false;
     }
 }
 
-const setEventListeners = (formEl) => {
+function setEventListeners(formEl) {
     const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
     const buttonElement = formEl.querySelector(".modal__submit-btn");
 
@@ -42,7 +42,7 @@ const setEventListeners = (formEl) => {
             toggleButtonState(inputList, buttonElement);
         });
     });
-};
+}
 
 function enableValidation() {
     const formList = document.querySelectorAll(".modal__form");

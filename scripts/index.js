@@ -43,12 +43,32 @@ const previewModalCloseBtn = previewModal.querySelector(".modal__close-icon");
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
+const handleEscapeKey = (event) => {
+    if (event.key === "Escape") {
+        closeModal(document.querySelector(".modal_opened"));
+    }
+}
+
+const handleClickOutside = (event) => {
+    if(event.target === document.querySelector(".modal_opened")) {
+        closeModal(document.querySelector(".modal_opened"))
+    }
+}
+
 function openModal(modal) {
     modal.classList.add("modal_opened");
+    
+    document.addEventListener("keydown", (handleEscapeKey));
+    
+    document.addEventListener("click", (handleClickOutside));
+       
 };
 
 function closeModal(modal) {
     modal.classList.remove("modal_opened");
+
+    document.removeEventListener("keydown", handleEscapeKey);
+    document.removeEventListener("click", handleClickOutside);
 };
 
 function handleEditFormSubmit(evt) {
