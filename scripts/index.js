@@ -61,6 +61,16 @@ function openModal(modal) {
     document.addEventListener("keydown", (handleEscapeKey));
     
     document.addEventListener("click", (handleClickOutside));
+
+    const form = modal.querySelector(".modal__form");
+
+    const inputs = form.querySelectorAll("input");
+
+    const submitButton = modal.querySelector(".modal__submit-btn");
+
+    checkInputValidity(form, inputs);
+    
+    toggleButtonState(inputs, submitButton);
        
 };
 
