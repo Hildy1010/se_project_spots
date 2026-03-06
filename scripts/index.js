@@ -1,20 +1,20 @@
 const initialCards = [
-    {name: "Val Thorens", 
+    {name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg"},
-    
+
     {name: "Restaurant Terrace",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg"},
-    
-    {name: "An outdoor cafe", 
+
+    {name: "An outdoor cafe",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg"},
-    
-    {name: "A very long bridge, over the forest and through the trees", 
+
+    {name: "A very long bridge, over the forest and through the trees",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"},
-    
+
     {name: "Tunnel with morning light",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"},
-    
-    {name: "Mountain house", 
+
+    {name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"},
 ];
 
@@ -57,21 +57,15 @@ const handleClickOutside = (event) => {
 
 function openModal(modal) {
     modal.classList.add("modal_opened");
-    
+
     document.addEventListener("keydown", (handleEscapeKey));
-    
+
     document.addEventListener("click", (handleClickOutside));
 
     const form = modal.querySelector(".modal__form");
-
-    const inputs = form.querySelectorAll("input");
-
-    const submitButton = modal.querySelector(".modal__submit-btn");
-
-    checkInputValidity(form, inputs);
-    
-    toggleButtonState(inputs, submitButton);
-       
+    if (form) {
+        resetValidation(form, config);
+    }
 };
 
 function closeModal(modal) {
@@ -94,8 +88,13 @@ function handleAddCardSubmit(evt) {
     const cardEl = getCardElement(inputValues);
     cardsList.prepend(cardEl);
     cardForm.reset();
+    toggleButtonState(
+        Array.from(cardForm.querySelectorAll(config.inputSelector)),
+        cardModal.querySelector(config.submitButtonSelector)
+    );
     closeModal(cardModal);
 };
+
 
 function getCardElement(data) {
     const cardElement = cardTemplate.content
@@ -119,12 +118,12 @@ function getCardElement(data) {
         previewModalImageEl.alt =  data.name;
         previewModalCaptionEl.textContent = data.name;
     });
-    
+
    const cardDeleteIconEl = cardElement.querySelector(".card__delete-icon");
    cardDeleteIconEl.addEventListener("click", () => {
     cardDeleteIconEl.closest(".card").remove();
    });
-    
+
    return cardElement;
 };
 
